@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ST-Frontend Assignment</title>
+</head>
+<body>
+<h1>Invoice Management</h1>
+<h2 id="formTitle">Create Invoice</h2>
+<form id="invoiceForm">
+    <input type="hidden" id="invoiceId">
+    <label for="clientName">Client Name:</label>
+    <input type="text" id="clientName" required><br><br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" required><br><br>
+    <label for="dueDate">Due Date:</label>
+    <input type="date" id="dueDate" required><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<table style="border: 1px;">
+    <thead>
+        <tr>
+            <th>Client Name </th> <br>
+            <th>Amount</th> <br>
+            <th>Due Date</th> <br>
+            <th>Actions</th> <br>
+        </tr>
+    </thead>
+    <tbody id="invoiceList">
+    </tbody>
+</table>
+
+<script src="app.js"></script>
+</body>
+</html>
