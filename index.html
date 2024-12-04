@@ -10,7 +10,14 @@
 <form id="invoiceForm">
     <input type="hidden" id="invoiceId">
     <label for="clientName">Client Name:</label>
-    <input type="text" id="clientName" required><br><br>
+    <select name="clientName" id="clientName" required>
+        <option value="Anastasija Dimkovska">Anastasija Dimkovska</option>
+        <option value="John Doe">John Doe</option>
+        <option value="Jane Doe">Jane Doe</option>
+        <option value="Filip S">Filip S</option>
+        <option value="Marija V">Marija V</option>
+    </select>
+    <br><br>
     <label for="amount">Amount:</label>
     <input type="number" id="amount" required><br><br>
     <label for="dueDate">Due Date:</label>

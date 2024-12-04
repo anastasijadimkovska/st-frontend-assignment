@@ -4,7 +4,6 @@ const invoiceList = document.querySelector('#invoiceList');
 const formTitle = document.querySelector('#formTitle');
 const invoiceId = document.querySelector('#invoiceId');
 
-
 form.addEventListener('submit', function(event) {
     event.preventDefault();
     const id = invoiceId.value;
@@ -45,7 +44,7 @@ function renderInvoices() {
             <td>
                 <button onclick="editInvoice('${invoice.id}')">Edit</button>
             </td>
-            <td> <button>Delete</button> 
+            <td> <button onclick="deleteInvoice('${invoice.id}')">Delete</button> 
             </td>
         `;
         invoiceList.appendChild(row);
@@ -60,7 +59,8 @@ function editInvoice(id) {
     invoiceId.value = invoice.id;
     formTitle.textContent = 'Edit Invoice';
 }
-
-
-
+function deleteInvoice(id) {
+    invoices.splice(id)
+    console.log(invoices)
+}
 window.onload = renderInvoices;
